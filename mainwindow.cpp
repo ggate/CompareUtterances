@@ -152,7 +152,10 @@ void MainWindow::displayMfccPlotWindow()
                                       fPath,
                                       fDtw,
                                       score);
-        std::cout << "Similarity = " << score/fPath.size() << std::endl;
+
+        fResult = score/fPath.size();
+        std::cout << "Similarity = " << fResult << std::endl;
+
         fIsDtwComputed = true;
     }
 
@@ -163,12 +166,12 @@ void MainWindow::displayMfccPlotWindow()
 
     fLayout2 = new QGridLayout;
 
-    QString value = QString::number(fResult/fPath.size());
+    QString value = QString::number(fResult);
     fLabel = new QLabel("Similarity Score = " + value);
     fLabelSuccess = new QLabel();
     fCombo = new QComboBox();
 
-    if(fResult/fPath.size() < 1500)
+    if(fResult < 1500)
         fLabelSuccess->setText("Utterances are similar");
     else
         fLabelSuccess->setText("Utterances are different");
