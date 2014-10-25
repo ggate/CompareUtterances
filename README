@@ -1,0 +1,41 @@
+DESCRIPTION
+-----------
+
+This is a simple project that aims to match a given audio utterance with pre-recorded ones using the
+dynamical time wrapping (dtw) algorithm on mfcc or plp features.
+
+These features (mfcc or plp) can be computed by using a open source framework like Sphinx, Kaldi or HTK.
+
+INPUTS
+------
+2 features files are required as input.
+
+Features files should be formated as follows:
+:
+feat0_t0, feat1_t0, feat2_t0, ..., featN_t0
+feat0_t1, feat1_t1, feat2_t1, ..., featN_t1
+...
+feat0_tM, feat1_tM, feat2_tM, ..., featN_tM
+
+with N the number components of the feature vector
+and M the number of feature vectors contained in the file
+
+OUTPUTS
+------
+
+The output is graphical : the dtw matrix and the a plot showing how the utterances can
+be time wrapped to match.
+
+DEPENDANCES
+-----------
+
+- QT and BOOST
+
+FILES
+-----
+
+The interesting part (dtw compuation) is contained in UtteranceComparator{.h, .cpp} files.
+These 2 files do not depend on QT.
+
+The rest of the files are here to provide a simple graphical interface to visualize
+the match between the utterances and depend on QT.
