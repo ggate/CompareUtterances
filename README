@@ -39,3 +39,9 @@ These 2 files do not depend on QT.
 
 The rest of the files are here to provide a simple graphical interface to visualize
 the match between the utterances and depend on QT.
+
+SAMPLE FILES
+------------
+
+The repository samples/ contains features (mfcc) files computed with Kaldi toolkit.
+These files can be used as inputs.
