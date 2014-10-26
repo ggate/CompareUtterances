@@ -45,3 +45,8 @@ SAMPLE FILES
 
 The repository samples/ contains features (mfcc) files computed with Kaldi toolkit.
 These files can be used as inputs.
+
+SCREENSHOTS
+-----------
+
+The repository screenshots/ shows the expected outputs when 2 utterances matches or mismatches.
